@@ -26,10 +26,10 @@ This repository contains lab assignments and implementations for the Analysis of
 ### GCD (Euclidean Algorithm) Flowchart
 ```mermaid
 graph TD
-    Start([Start]) --> Input[/Input a, b/]
-    Input --> Cond{b == 0?}
-    Cond -- Yes --> Out[/Output a/]
-    Cond -- No --> Calc[temp = a % b<br/>a = b<br/>b = temp]
+    Start([Start]) --> Input[/"Input a, b"/]
+    Input --> Cond{"b == 0?"}
+    Cond -- Yes --> Out[/"Output a"/]
+    Cond -- No --> Calc["temp = a % b<br/>a = b<br/>b = temp"]
     Calc --> Cond
     Out --> Stop([Stop])
 ```
@@ -37,17 +37,17 @@ graph TD
 ### Bubble Sort Flowchart (Conceptual)
 ```mermaid
 graph TD
-    Start([Start]) --> Input[/Input Array A of size N/]
-    Input --> LoopI[For i from 0 to N-1]
-    LoopI --> LoopJ[For j from 0 to N-i-1]
-    LoopJ --> Cond{A[j] > A[j+1]?}
-    Cond -- Yes --> Swap[Swap A[j] and A[j+1]]
-    Cond -- No --> NextJ[Next j]
+    Start([Start]) --> Input[/"Input Array A of size N"/]
+    Input --> LoopI["For i from 0 to N-1"]
+    LoopI --> LoopJ["For j from 0 to N-i-1"]
+    LoopJ --> Cond{"A[j] > A[j+1]?"}
+    Cond -- Yes --> Swap["Swap A[j] and A[j+1]"]
+    Cond -- No --> NextJ["Next j"]
     Swap --> NextJ
     NextJ --> LoopJ
-    LoopJ -. Loop J Ends .-> NextI[Next i]
+    LoopJ -. "Loop J Ends" .-> NextI["Next i"]
     NextI --> LoopI
-    LoopI -. Loop I Ends .-> Out[/Output Sorted A/]
+    LoopI -. "Loop I Ends" .-> Out[/"Output Sorted A"/]
     Out --> Stop([Stop])
 ```
 
